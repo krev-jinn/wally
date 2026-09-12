@@ -54,7 +54,7 @@ class InstrumentData
   """
   Returns the instrument price.
   """
-  fun price(): F64 => _price
+  fun price(): F64 val => _price
 
 """
 Parses instrument data from a comma-separated string.
@@ -86,6 +86,9 @@ class RandomNumberGenerator
     "S";"T";"U";"V";"W";"X";"Y";"Z";"a";"b";"c";"d";"e";"f";"g";"h"; "i";"j"
     "k";"l";"m";"n";"o";"p";"q";"r";"s";"t";"u";"v";"w";"x";"y";"z"]
 
+  """
+  Creates a random number generator with the given seed.
+  """
   new create(seed: U64 = Time.nanos()) =>
     _rand = MT(seed)
 
