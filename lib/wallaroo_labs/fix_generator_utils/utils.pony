@@ -54,7 +54,7 @@ class InstrumentData
   """
   Returns the instrument price.
   """
-  fun price(): F64 val => _price
+  fun price(): F64 => _price
 
 """
 Parses instrument data from a comma-separated string.
